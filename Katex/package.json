@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild wwwroot/lib/**/*.ts --outbase=./ --outdir=./ --bundle --minify --sourcemap --format=esm"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "@microsoft/signalr": "^10.0.0"
+  },
+  "dependencies": {
+    "katex": "^0.16.28"
+  }
+}

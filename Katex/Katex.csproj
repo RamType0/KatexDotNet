@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Authors>RamType0</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<RepositoryUrl>https://github.com/RamType0/KatexDotNet</RepositoryUrl>
+		<Description>KaTeX integration for Blazor.</Description>
+		<PackageTags>aspnetcore, components, Blazor, KaTeX</PackageTags>
+		<Copyright>© RamType0</Copyright>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.3" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.9.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		
+	</ItemGroup>
+	<ItemGroup>
+		<Content Update="package*.json;tsconfig.json" Pack="false" />
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<Target Name="ESBuild" AfterTargets="CompileTypeScript">
+		<Exec Command="npm install" />
+		<Exec Command="npm run build" />
+	</Target>
+
+</Project>

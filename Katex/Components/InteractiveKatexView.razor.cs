@@ -24,7 +24,7 @@ partial class InteractiveKatexView : IAsyncDisposable
             throw new InvalidOperationException($"{nameof(InteractiveKatexView)} must be used in interactive platform.");
         }
         moduleTask = new(() => JsRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./Katex/lib/katex.js").AsTask());
+                "import", "./_content/Katex/lib/katex.js").AsTask());
     }
 
     protected override async Task OnParametersSetAsync()

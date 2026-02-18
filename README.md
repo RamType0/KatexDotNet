@@ -1,5 +1,5 @@
-[![Version](https://img.shields.io/nuget/v/Katex?logo=nuget&style=flat-square)](https://www.nuget.org/packages/RamType0.Markdig.Renderers.MudBlazor/)
-[![Nuget downloads](https://img.shields.io/nuget/dt/Katex?label=nuget%20downloads&logo=nuget&style=flat-square)](https://www.nuget.org/packages/RamType0.Markdig.Renderers.MudBlazor/)  
+[![Version](https://img.shields.io/nuget/v/Katex?logo=nuget&style=flat-square)](https://www.nuget.org/packages/Katex/)
+[![Nuget downloads](https://img.shields.io/nuget/dt/Katex?label=nuget%20downloads&logo=nuget&style=flat-square)](https://www.nuget.org/packages/Katex/)  
 # KatexDotNet
 KatexDotNet is [KaTeX](https://github.com/KaTeX/KaTeX) integration for Blazor.
 
